@@ -110,3 +110,7 @@ input#edad {
 ol {
   padding-left: 8%;
 }
+
+ul {
+  list-style: none;
+}

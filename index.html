@@ -19,10 +19,7 @@
     <div id="info__container" class="flex hide">
       <div id="info">
         <div class="close"><button id="closeInfo">Cerrar</button></div>
-        <p id="message">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum natus facilis laboriosam
-          dolores,
-          tempora assumenda voluptatem saepe, architecto consectetur eum nam vel ad quaerat in aut tempore rerum.
-          Voluptatem, quos?</p>
+        <p id="message"></p>
       </div>
     </div>
     <form action="http://193.147.87.202/procesaform.php" method="post" enctype="multipart/form-data" id="form">
@@ -36,10 +33,16 @@
       <input class="border-input" type="password" id="contraseña" name="contraseña" tam="20" placeholder="Contraseña*"
         required>
 
-      <div class="flex row">
-        <label for="edad">Estudiante</label>
-        <input type="checkbox" id="edad" name="edad" />
-      </div>
+      <ul class="flex row">
+        <li>
+          <label for="estudiante">Estudiante</label>
+          <input type="checkbox" id="estudiante" name="estudiante" />
+        </li>
+        <li>
+          <label for="p">Profesor</label>
+          <input type="checkbox" id="p" name="p" />
+        </li>
+      </ul>
 
       <div>
         <label for="foto">Subir foto</label>
@@ -47,22 +50,22 @@
       </div>
 
       <div class="flex" style="align-items: start;">
-        <label for="cars">Elige un modelo de coche</label>
-        <select name="coche[]" size="12" multiple="multiple" id="cars" class="w100 border-input">
-          <optgroup label="Porsche">
-            <option name="coche[]" value="918 Spider">918 Spider</option>
-            <option name="coche[]" value="Panamera">Panamera</option>
-            <option name="coche[]" value="GT3RS">GT3RS</option>
+        <label for="phones">Elige un modelo de coche</label>
+        <select name="telefono[]" size="12" multiple="multiple" id="phones" class="w100 border-input">
+          <optgroup label="Apple">
+            <option name="telefono[]" value="iPhone 15 Pro">iPhone 15 Pro</option>
+            <option name="telefono[]" value="MacBook Air">MacBook Air</option>
+            <option name="telefono[]" value="iPad Mini">iPad Mini</option>
           </optgroup>
-          <optgroup label="Ferrari">
-            <option name="coche[]" value="F40">F40</option>
-            <option name="coche[]" value="488 Pista">488 Pista</option>
-            <option name="coche[]" value="Portofino">Portofino</option>
+          <optgroup label="Samsung">
+            <option name="telefono[]" value="Galaxy S21">Galaxy S21</option>
+            <option name="telefono[]" value="Galaxy Note 20">Galaxy Note 20</option>
+            <option name="telefono[]" value="Galaxy Tab A">Galaxy Tab A</option>
           </optgroup>
-          <optgroup label="BMW">
-            <option name="coche[]" value="E30">E30</option>
-            <option name="coche[]" value="M5 CS">M5 CS</option>
-            <option name="coche[]" value="X6">X6</option>
+          <optgroup label="Google">
+            <option name="telefono[]" value="Pixel 6">Pixel 6</option>
+            <option name="telefono[]" value="Pixel 5a">Pixel 5a</option>
+            <option name="telefono[]" value="Nexus 6P">Nexus 6P</option>
           </optgroup>
         </select>
       </div>
