@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Formulario</title>
+  <link rel="shortcut icon" href="./public/formulario.png" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
+  <script defer src="/main.js"></script>
+</head>
+
+<body class="flex">
+  <section class="form__wrapper flex">
+    <h1>Encuesta general</h1>
+
+    <div id="info__container" class="flex hide">
+      <div id="info">
+        <div class="close"><button id="closeInfo">Cerrar</button></div>
+        <p id="message">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum natus facilis laboriosam
+          dolores,
+          tempora assumenda voluptatem saepe, architecto consectetur eum nam vel ad quaerat in aut tempore rerum.
+          Voluptatem, quos?</p>
+      </div>
+    </div>
+    <form action="http://193.147.87.202/procesaform.php" method="post" enctype="multipart/form-data" id="form">
+      <div class="flex row w100">
+        <input class="border-input" type="text" id="nombre" name="nombre" tam="10" placeholder="Nombre*" required />
+        <input class="border-input" type="text" id="apellido" name="apellido" tam="20" placeholder="Apellidos*"
+          required />
+      </div>
+
+      <input class="border-input" type="email" id="email" name="email" tam="40" placeholder="Dirección Email" />
+      <input class="border-input" type="password" id="contraseña" name="contraseña" tam="20" placeholder="Contraseña*"
+        required>
+
+      <div class="flex row">
+        <label for="edad">Estudiante</label>
+        <input type="checkbox" id="edad" name="edad" />
+      </div>
+
+      <div>
+        <label for="foto">Subir foto</label>
+        <input type="file" id="foto" name="foto" accept=".jpg, .jpeg, .png" />
+      </div>
+
+      <div class="flex" style="align-items: start;">
+        <label for="cars">Elige un modelo de coche</label>
+        <select name="coche[]" size="12" multiple="multiple" id="cars" class="w100 border-input">
+          <optgroup label="Porsche">
+            <option name="coche[]" value="918 Spider">918 Spider</option>
+            <option name="coche[]" value="Panamera">Panamera</option>
+            <option name="coche[]" value="GT3RS">GT3RS</option>
+          </optgroup>
+          <optgroup label="Ferrari">
+            <option name="coche[]" value="F40">F40</option>
+            <option name="coche[]" value="488 Pista">488 Pista</option>
+            <option name="coche[]" value="Portofino">Portofino</option>
+          </optgroup>
+          <optgroup label="BMW">
+            <option name="coche[]" value="E30">E30</option>
+            <option name="coche[]" value="M5 CS">M5 CS</option>
+            <option name="coche[]" value="X6">X6</option>
+          </optgroup>
+        </select>
+      </div>
+
+
+      <div class="flex row w100">
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Reset" />
+      </div>
+    </form>
+  </section>
+</body>
+
+</html>
